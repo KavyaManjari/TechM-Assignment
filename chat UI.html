@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Chat UI</title>
+    <style>
+        body {
+
+            margin-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            background-image: linear-gradient(to right bottom, #cfb1e8, #e7afd6, #f2b1c3, #f3b7b3, #edbfab);
+        }
+
+        .top-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #top-one {
+            margin-left: 20px;
+        }
+
+        
+
+        .middle-container {
+            padding-top: 90px;
+            margin-left: 200px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        .bottom-container {
+            padding-top: 150px;
+        }
+
+        input {
+            width: 450px;
+            height: 25px;
+            border-radius: 55px;
+            border: none;
+        }
+
+        .bottom-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .material-icons{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-container">
+        <div id="top-one">
+            <i class="material-icons">arrow_back</i>
+        </div>
+        <div id="top-two">
+            <i class="material-icons">call</i> &nbsp;&nbsp;
+            <i class="material-icons">video_call</i>&nbsp;&nbsp;
+            <i class="material-icons">details</i>&nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="middle-container">
+        <img src="C:\Users\NM00807219\My Learning\Assignment\img_avatar1.png" alt="profile_pic">
+        <h5 style="margin-left: 85px;">Abc</h5>
+    </div>
+    <div class="bottom-container">
+        <div class="bottom-one">
+            <i class="material-icons">location_on</i>&nbsp;&nbsp;
+            <i class="material-icons">camera_alt</i>&nbsp;&nbsp;
+            <i class="material-icons">image</i>&nbsp;&nbsp;
+            <i class="material-icons">keyboard_voice</i>
+            <i class="material-icons">tag_faces</i>
+            <input type="text">
+        </div>
+        <div class="bottom-two">
+            <i class="material-icons">thumb_up</i>
+        </div>
+    </div>
+</body>
