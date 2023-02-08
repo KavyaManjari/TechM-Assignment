@@ -1,0 +1,236 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Weather App</title>
+
+    <style>
+        body {
+            
+            background-image: linear-gradient(to bottom, #42ee71, #00dec2, #00c6ff, #00a3ff, #6f74ed);
+            
+            
+        }
+
+        .top-container {
+            margin-top: 55px;
+            margin-left: 100px;
+            margin-right: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 2px solid steelblue;
+            padding-bottom: 20px;
+            /*Bottom space between content and border*/
+        }
+
+        .select-menu {
+            padding: 10px 30px;
+            font-size: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            font-weight: 300;
+            text-decoration: none;
+            border-radius: 100px;
+            background-color: #f77707;
+            border: 1px solid #e67e22;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color:white;
+            color:#e67e22;
+        }
+
+        .middle-container {
+            padding-top: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 25px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .column {
+            border: 2px solid gray;
+            width: 90%;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom, #42ee71, #00dec2, #00c6ff, #00a3ff, #6f74ed);
+        }
+
+        .title-text {
+            text-align: center;
+            padding: 1px 5px;
+            font-style: italic;
+            font-size: large;
+            border-bottom: 1px solid gray;
+        }
+
+        .material-icons{
+
+            float: right;
+            color: rgb(35, 2, 133);
+            cursor: pointer;
+        }
+        .delete:hover{
+
+            color: whitesmoke;
+        }
+
+        .sun{
+           color: red;
+           font-size:28px;
+        }
+
+        .description {
+
+            text-align: right;
+            padding-top: 8px;
+
+        }
+
+        .degree {
+            text-align: center;
+            color: rgb(208, 227, 240);
+            font-size: 40px;
+        }
+
+        .feels {
+            text-align: center;
+            padding-bottom: 5px;
+            font-size: 18px;
+
+        }
+
+        .rise-set {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+
+        }
+
+        .sunset {
+            text-align: center;
+            float: left;
+            font-size: 15px;
+        }
+
+        .sunrise {
+            text-align: center;
+            float: right;
+            font-size: 15px;
+        }
+
+        .bottom-container {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top-container">
+
+        <div class="menu">
+            <label style="font-size:150%;color:white">Select: </label>
+            <select class="select-menu">
+                <option value="">City </option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="chennai">Chennai</option>
+                <option value="pune">Pune</option>
+                <option value="delhi">Delhi</option>
+            </select>
+        </div>
+
+        <div>
+            <a class="btn" href="#">Add</a>
+        </div>
+
+        <div>
+            <a class="btn" href="#" onclick="window.location.reload(true);">Reload</a>
+        </div>
+    </div>
+
+    <div class="middle-container">
+        <div class="column">
+            <div class="title-text">
+                <p>Pune, India <i class="material-icons delete">delete_forever</i></p>
+            </div>
+            <div class="description">
+                <i class="material-icons sun">wb_sunny</i>
+                <p>Clear Sky</p>
+            </div>
+            <div class="degree">
+                <h1>27 c</h1>
+            </div>
+            <div class="feels">
+                <p>Feels like: 25c</p>
+            </div>
+            <div class="rise-set">
+                <a class="sunrise" href="http://clipart-library.com/clipart/591787.htm"><img src="http://clipart-library.com/image_gallery/591787.png" width="50" height="20" /></a>
+                <a class="sunset" href="http://clipart-library.com/clipart/591804.htm"><img src="http://clipart-library.com/image_gallery/591804.png" width="50" height="20" /></a>
+            </div>
+            <div class="rise-set">
+                <div class="sunrise">Sunrise 07:35</div>
+                <div class="sunset">Sunset 18:55</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="title-text">
+                <p>Mumbai, India <i class="material-icons delete">delete_forever</i></p>
+            </div>
+            <div class="description">
+                <i class="material-icons sun">wb_sunny</i>
+                <p>Clear Sky</p>
+            </div>
+            <div class="degree">
+                <h1>31 c</h1>
+            </div>
+            <div class="feels">
+                <p>Feels like: 35c</p>
+            </div>
+            <div class="rise-set">
+                <a class="sunrise" href="http://clipart-library.com/clipart/591787.htm"><img src="http://clipart-library.com/image_gallery/591787.png" width="50" height="20" /></a>
+                <a class="sunset" href="http://clipart-library.com/clipart/591804.htm"><img src="http://clipart-library.com/image_gallery/591804.png" width="50" height="20" /></a>
+            </div>
+            <div class="rise-set">
+                <div class="sunrise">Sunrise 07:32</div>
+                <div class="sunset">Sunset 18:46</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="title-text">
+                <p>Hyderabad, India <i class="material-icons delete">delete_forever</i></p>
+            </div>
+            <div class="description">
+                <i class="material-icons sun">wb_sunny</i>
+                <p>Clear Sky</p>
+            </div>
+            <div class="degree">
+                <h1>29 c</h1>
+            </div>
+            <div class="feels">
+                <p>Feels like: 27c</p>
+            </div>
+            <div class="rise-set">
+                <a class="sunrise" href="http://clipart-library.com/clipart/591787.htm"><img src="http://clipart-library.com/image_gallery/591787.png" width="50" height="20" /></a>
+                <a class="sunset" href="http://clipart-library.com/clipart/591804.htm"><img src="http://clipart-library.com/image_gallery/591804.png" width="50" height="20" /></a>
+            </div>
+            <div class="rise-set">
+                <div class="sunrise">Sunrise 07:42</div>
+                <div class="sunset">Sunset 19:05</div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-container">
+        <a class="btn btn-full" href="#">Save</a>
+    </div>
+    
+</body>
