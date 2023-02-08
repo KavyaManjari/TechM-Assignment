@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.todo-field').change(function () {
+        var todolist = $(this).val();
+        $('ul').append('<li>' + todolist + '<i class="material-icons">delete</i>' + '</li>');
+        $(this).val("");
+      });
+      $('ul').on("click", "li", function () {
+        $(this).toggleClass("completed");
+      });
+      $('ul').on('click', '.material-icons', function () {
+        $(this).parent().remove();
+      });
+      /*$('.btn-cls').on('click', '.btn', function(){
+          alert("Hi");
+          /*var lists = $('.list-view').val();
+          localStorage.setItem("list","lists");
+         });*/
+
+      $(".btn-s").click(function () {
+        alert("Your list is being updated");
+      });
+
+      $(".btn-l").click(function () {
+        alert("Text: " + $(".list-view").text());
+      });
+
+      /* var imgArray = Array();
+
+       $('ul li').each(function(){
+      imgArray.push($(this).val(''));
+      })
+      localStorage.setItem("list",imgArray);
+     /*var arrayList = $.map(imgArray, function(value){
+       return "<li>" + value + "</li>";
+              })
+       $('.indv').html(arrayList);*/
+
+
+    });
+  </script>
+  <title>Todo List App</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #2E3192, #1BFFFF);
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .heading {
+      font-family: "century Gothic cursive";
+      color: whitesmoke;
+      font-style: italic;
+      font-size: 60px;
+    }
+
+    .text-box input {
+      border: 1.5px solid whitesmoke;
+      outline: none;
+      padding: 5px;
+      border-radius: 25px;
+      font-size: 20px;
+      width: 35%;
+      border-radius: 100px;
+    }
+
+    .list-view {
+      text-align: left;
+      padding-top: 35px;
+      font-size: 25px;
+      margin-left: 390px;
+      color: whitesmoke;
+    }
+
+    .material-icons {
+      float: right;
+      margin-right: 450px;
+      cursor: pointer;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: black;
+    }
+
+    .btn-cls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 150px;
+      padding: 10px 20px;
+      color: white;
+      font-style: italic;
+      border: 1px solid skyblue;
+      text-decoration: none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: #11024e
+    }
+
+    .btn:hover {
+      background-color: whitesmoke;
+      color: #11024E;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1 class="heading">To-Do List</h1>
+    <div class="text-box">
+      <input class="todo-field" type="text" placeholder="Add a new task">
+    </div>
+    <div>
+      <ul class="list-view"></ul>
+    </div>
+    <div class="btn-cls">
+      <div><a class="btn btn-s" href="#">save</a></div>
+      <div><a class="btn btn-l" href="#">Load</a></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
